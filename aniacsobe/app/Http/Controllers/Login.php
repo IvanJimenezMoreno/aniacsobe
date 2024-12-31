@@ -16,7 +16,7 @@ class Login extends Controller
         ]);
 
         if($validator->fails()){
-            return response()->json(['mensajeError'=>'Debes completar todos los campos'], 400);
+            return response()->json(['mensajeError'=>'Debes completar todos los campos para poeder iniciar sesión'], 400);
         }
 
         $usuario = Usuario::where('email', $request->email)->first();
